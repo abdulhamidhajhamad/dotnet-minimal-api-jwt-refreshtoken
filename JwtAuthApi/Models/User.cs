@@ -1,11 +1,10 @@
-namespace DefaultNamespace;
+namespace JwtAuthApi.Models;
 
 public class User
 {
-    public string username { get; set; } = string.Empty;
-    public string password { get; set; } = string.Empty;
-    public string role { get; set; } = "User";
-    
+    public string Username { get; set; } = string.Empty;
+    public string PasswordHash { get; set; } = string.Empty;
+    public string Role { get; set; } = "User";
     public string? RefreshToken { get; set; }
-    public dateTime? RefreshTokenExpires { get; set; }
+    public DateTime? RefreshTokenExpiryTime { get; set; } 
 }

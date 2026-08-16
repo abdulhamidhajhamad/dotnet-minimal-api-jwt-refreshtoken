@@ -1,8 +1,6 @@
-namespace DefaultNamespace;
+namespace JwtAuthApi.Models;
 
-public class AuthDtos
-{
-    public record LoginReques(string username, string password);
+public record LoginRequest(string Username, string Password);
 
-    public record AuthResponse(string AccessToken, string RefreshToken, DateTime ExpiresAt);
-    public record RefreshTokenRequest(string AccessToken, string RefreshToken);}
+public record AuthResponse(string AccessToken, string RefreshToken, DateTime ExpiresAt);
+public record RefreshTokenRequest(string RefreshToken);
